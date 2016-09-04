@@ -18,7 +18,7 @@ import render from "./render"
 
 let start = Date.now()
 
-initFolders({ root: "./data" })()
+initFolders({ root: "./sample" })()
   .then(parseData(parsers))
   .then(mergeByName())
   .then(mergeIndex())
@@ -27,8 +27,8 @@ initFolders({ root: "./data" })()
   .then(catalyzer())
   // .then((tree) => { console.log(inspect(tree, { depth: null })) })
   .then((tree) => {
-    console.log(tree.children.content)
-    console.log(tree.children.content.children["like-this"].author)
+    console.log(tree.children.books)
+    console.log(tree.children.books.children.hello.author)
   })
 
 let end = Date.now()

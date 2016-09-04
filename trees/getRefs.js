@@ -17,7 +17,6 @@ function refInProps(props) {
   Object.keys(props).forEach((key) => {
     let value = props[key].value
     if (refRE.test(value)) {
-      console.log(props)
       props[key].get = getRefClosure(value)
       delete props[key].value
     }
