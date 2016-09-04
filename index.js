@@ -26,10 +26,6 @@ initFolders({ root: "./sample" })()
   .then(getRefs())
   .then(catalyzer())
   // .then((tree) => { console.log(inspect(tree, { depth: null })) })
-  .then((tree) => {
-    console.log(tree.children.books)
-    console.log(tree.children.books.children.hello.author)
-  })
 
 let end = Date.now()
 
