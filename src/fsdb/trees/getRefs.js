@@ -1,5 +1,5 @@
 import get from "lodash.get"
-import mapRecurse from "../helpers/mapRecurse"
+import mapRecurse from "../mapRecurse"
 
 // */parent/child/grandchild.property.property
 const refRE = /^\*((?:\/[\w-]+)+(?:\.[\w-]+)*)$/g

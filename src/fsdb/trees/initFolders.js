@@ -1,7 +1,7 @@
 import p from "path"
 import Promise from "bluebird"
-import mapRecurse from "../helpers/mapRecurse"
-import { mergeWithObj } from "../helpers/mergeProps"
+import mapRecurse from "../mapRecurse"
+import { mergeWithObj } from "../mergeProps"
 
 const fs = Promise.promisifyAll(require("fs"))
 

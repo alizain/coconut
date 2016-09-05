@@ -1,6 +1,6 @@
-import mapRecurse from "../helpers/mapRecurse"
-import { mergeWithProps } from "../helpers/mergeProps"
-import sortChildren from "../helpers/sortChildren"
+import mapRecurse from "../mapRecurse"
+import { mergeWithProps } from "../mergeProps"
+import sortChildren from "../sortChildren"
 
 export default function() {
 
