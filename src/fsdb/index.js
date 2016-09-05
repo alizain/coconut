@@ -1,4 +1,3 @@
-import Promise from "bluebird"
 import initFolders from "./trees/initFolders"
 import parseData from "./trees/parseData"
 import mergeByName from "./trees/mergeByName"
@@ -6,16 +5,11 @@ import mergeIndex from "./trees/mergeIndex"
 import getRefs from "./trees/getRefs"
 import inheritProxy from "./trees/inheritProxy"
 import catalyzer from "./trees/catalyzer"
-import parsers from "./parsers"
+import defaultParsers from "./parsers"
 
-// Automtically handled when using bluebird promises
-// Promise.onPossiblyUnhandledRejection((error) => {
-//   throw error
-// })
-
-export default function({ root }) {
+export default function(root, usedParsers) {
   return initFolders(root)()
-    .then(parseData(parsers))
+    .then(parseData(usedParsers || defaultParsers))
     .then(mergeByName())
     .then(mergeIndex())
     .then(inheritProxy())

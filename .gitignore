@@ -38,9 +38,6 @@ node_modules
 # Bower related things
 bower
 
-# Dist - not needed :(
-dist
-
 # The directory Mix will write compiled artifacts to.
 /_build
 
@@ -58,3 +55,6 @@ erl_crash.dump
 
 # Also ignore archive artifacts (built via "mix archive.build").
 *.ez
+
+# Ignore lib folder where we keep babelified JS
+lib

@@ -8,7 +8,9 @@ function all() {
   return components
 }
 
-export default {
+export const Registry = {
   add,
   all
 }
+
+export default Registry
