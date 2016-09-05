@@ -5,7 +5,7 @@ import Registry from "./registry"
 
 const fs = Promise.promisifyAll(require("fs"))
 
-const layouts = "./sample/layouts"
+const layouts = "../../sample/layouts"
 
 function requireArr(files) {
   files.forEach((f) => {

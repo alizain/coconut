@@ -1,6 +1,4 @@
 import Promise from "bluebird"
-import { inspect } from "util"
-
 import initFolders from "./trees/initFolders"
 import parseData from "./trees/parseData"
 import mergeByName from "./trees/mergeByName"
@@ -15,18 +13,12 @@ import parsers from "./parsers"
 //   throw error
 // })
 
-let start = Date.now()
-
-initFolders({ root: "./sample/data" })()
-  .then(parseData(parsers))
-  .then(mergeByName())
-  .then(mergeIndex())
-  .then(inheritProxy())
-  .then(getRefs())
-  .then(catalyzer())
-  // .then((tree) => { console.log(inspect(tree, { depth: null })) })
-
-let end = Date.now()
-
-console.log(start)
-console.log(end)
+export default function({ root }) {
+  return initFolders(root)()
+    .then(parseData(parsers))
+    .then(mergeByName())
+    .then(mergeIndex())
+    .then(inheritProxy())
+    .then(getRefs())
+    .then(catalyzer())
+}

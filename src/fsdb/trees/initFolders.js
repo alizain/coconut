@@ -5,7 +5,7 @@ import { mergeWithObj } from "../mergeProps"
 
 const fs = Promise.promisifyAll(require("fs"))
 
-export default function({ root }) {
+export default function(root) {
 
   let absRoot = p.resolve(root)
 
