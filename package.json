@@ -32,7 +32,9 @@
     "eslint-plugin-jsx-a11y": "latest",
     "eslint-plugin-react": "latest"
   },
-  "scripts": {},
+  "scripts": {
+    "dev": "babel src --out-dir lib"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alizain/catalyst.git"
