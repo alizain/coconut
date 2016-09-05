@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+"use strict";
+
+var _bluebird = require("bluebird");
+
+var _bluebird2 = _interopRequireDefault(_bluebird);
+
+var _path = require("path");
+
+var _path2 = _interopRequireDefault(_path);
+
+var _process = require("process");
+
+var _process2 = _interopRequireDefault(_process);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var fs = _bluebird2.default.promisifyAll(require("fs"));
+
+console.log(_process2.default.cwd());

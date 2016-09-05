@@ -2,7 +2,8 @@
   "name": "catalyst",
   "version": "0.1.0",
   "description": "a new kind of static server",
-  "main": "index.html",
+  "bin": "bin/catalyst.es5",
+  "main": "src/index.js",
   "dependencies": {
     "babel-polyfill": "^6.13.0",
     "babel-register": "^6.14.0",
