@@ -4,7 +4,7 @@
   "description": "static site generator with proper data model and react templates",
   "bin": "bin/catalyst.js",
   "main": "lib/index.js",
-  "dependencies": {
+  "optionalDependencies": {
     "babel-register": "^6.14.0",
     "babel-runtime": "^6.11.6",
     "js-yaml": "^3.6.1",
