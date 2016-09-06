@@ -1,3 +1,5 @@
+import "babel-register"
+
 // watch for changes in file system and re-update as necessary
 
 export function watch() {

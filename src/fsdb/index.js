@@ -3,16 +3,16 @@ import parseData from "./trees/parseData"
 import mergeByName from "./trees/mergeByName"
 import mergeIndex from "./trees/mergeIndex"
 import getRefs from "./trees/getRefs"
-import inheritProxy from "./trees/inheritProxy"
+import inheritFrom from "./trees/inheritFrom"
 import catalyzer from "./trees/catalyzer"
-import defaultParsers from "./parsers"
+import parsers from "./parsers"
 
-export default function(root, usedParsers) {
-  return initFolders(root)()
-    .then(parseData(usedParsers || defaultParsers))
+export default function(config) {
+  return initFolders(config.data)()
+    .then(parseData(parsers))
     .then(mergeByName())
     .then(mergeIndex())
-    .then(inheritProxy())
+    .then(inheritFrom(config.inheritFrom))
     .then(getRefs())
     .then(catalyzer())
 }

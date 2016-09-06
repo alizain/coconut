@@ -1,36 +1,31 @@
 export default function() {
 
-  return function catalyze(node, parent) {
+  return function catalyze(node, parent, root) {
 
-    let self = {}
-    if (!parent) {
-      Object.defineProperties(self, node.data)
-      Object.defineProperties(self, {
-        root: { value: self }
-      })
-    } else {
-      self = Object.create(parent, node.data)
-      Object.defineProperties(self, {
-        parent: { value: parent }
-      })
+    let self = Object.create(Object.prototype, node.data)
+    if (parent) {
+      if (parent.inheritance) {
+        self = Object.create(parent.inheritance, node.data)
+      }
+      Object.defineProperty(self, "parent", { value: parent })
     }
 
-    let inheritance = self
+    if (!root) {
+      root = self
+    }
+    Object.defineProperty(self, "root", { value: root })
+
     if (node.inheritance) {
-      inheritance = Object.create(self, node.inheritance)
-      Object.defineProperties(self, {
-        inheritance: { value: inheritance }
-      })
+      let inheritance = Object.create(Object.prototype, node.inheritance)
+      Object.defineProperty(self, "inheritance", { value: inheritance })
     }
 
     if (node.children) {
       let children = node.children.reduce((all, obj) => {
-        all[obj.data.slug.value] = catalyze(obj, inheritance)
+        all[obj.data.slug.value] = catalyze(obj, self, root)
         return all
       }, {})
-      Object.defineProperties(self, {
-        children: { value: Object.freeze(children) }
-      })
+      Object.defineProperty(self, "children", { value: Object.freeze(children) })
     }
 
     return self

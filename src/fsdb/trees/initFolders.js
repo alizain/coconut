@@ -5,9 +5,7 @@ import { mergeWithObj } from "../mergeProps"
 
 const fs = Promise.promisifyAll(require("fs"))
 
-export default function(root) {
-
-  let absRoot = p.resolve(root)
+export default function(absRoot) {
 
   return mapRecurse(async (absPath) => {
 

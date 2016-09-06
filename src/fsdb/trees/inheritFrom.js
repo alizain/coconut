@@ -2,7 +2,7 @@ import mapRecurse from "../mapRecurse"
 import { mergeWithProps } from "../mergeProps"
 import sortChildren from "../sortChildren"
 
-export default function() {
+export default function(name) {
 
   return mapRecurse((node) => {
 
@@ -11,7 +11,7 @@ export default function() {
     sortChildren(node)
 
     node.children = node.children.filter((obj) => {
-      if (obj.isFile && obj.path.name === "inheritance") {
+      if (obj.isFile && obj.path.name === name) {
         node.inheritance = mergeWithProps({}, obj.data)
         return false
       }

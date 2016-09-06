@@ -1,16 +1,17 @@
 const components = {}
 
-function add(name, comp) {
-  components[name] = comp
+function get(name) {
+  return components[name]
 }
 
-function all() {
-  return components
+function add(name, comp) {
+  if (get(name)) { throw new Error(`Cannot register duplicate components (${name})`) }
+  components[name] = comp
 }
 
 export const Registry = {
   add,
-  all
+  get
 }
 
 export default Registry

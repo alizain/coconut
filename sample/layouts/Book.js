@@ -1,10 +1,10 @@
 import React from "react"
 import { Registry } from "catalyst"
 
-function Book({ title }) {
+function Book({ node }) {
   return (
-    <h1>{title}</h1>
+    <h1>{node.title}</h1>
   )
 }
 
-Registry.add("Book", Book)
+Registry.add("book", Book)
