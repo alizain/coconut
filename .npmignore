@@ -3,3 +3,6 @@ src
 
 # Do include lib files, which are not version tracked
 !lib
+
+# Don't include sample folder
+sample
