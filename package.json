@@ -2,7 +2,7 @@
   "name": "catalyst",
   "version": "0.1.0",
   "description": "a new kind of static server",
-  "bin": "bin/catalyst.es5",
+  "bin": "bin/catalyst.js",
   "main": "lib/index.js",
   "dependencies": {
     "babel-polyfill": "^6.13.0",
@@ -33,7 +33,8 @@
     "eslint-plugin-react": "latest"
   },
   "scripts": {
-    "dev": "babel src --out-dir lib"
+    "dev:src": "./node_modules/.bin/babel src --out-dir lib",
+    "dev:bin": "./node_modules/.bin/babel bin --out-dir bin -x '.es6'"
   },
   "repository": {
     "type": "git",
