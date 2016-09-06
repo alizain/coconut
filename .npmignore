@@ -1,2 +1,5 @@
 # Don't package up ES6 source files
 src
+
+# Do include lib files, which are not version tracked
+!lib
