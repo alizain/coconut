@@ -1,5 +1,5 @@
 import React from "react"
-import { Registry } from "catalyst"
+import { Registry } from "catalyst-static"
 
 function Book({ node }) {
   return (

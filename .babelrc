@@ -1,13 +1,12 @@
 {
   "presets": [
     "react",
-    "es2015",
-    "stage-3"
+    "stage-3",
+    "es2015"
   ],
   "plugins": [
     "syntax-async-functions",
     "transform-object-rest-spread",
-    "transform-es2015-destructuring",
-    "transform-runtime"
+    "transform-es2015-destructuring"
   ]
 }
