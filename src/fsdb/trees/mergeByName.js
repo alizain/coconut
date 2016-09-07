@@ -18,6 +18,7 @@ export default function() {
       let match = dirs.find(d => d.path.name === obj.path.name)
       if (match) {
         match.data = mergeWithProps(match.data, obj.data)
+        match.sources.push(obj.pathStr)
       } else {
         children.push(obj)
       }

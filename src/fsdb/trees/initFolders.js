@@ -24,6 +24,7 @@ export default function(absRoot) {
     let self = {
       pathStr: absPath,
       path: absParsed,
+      sources: [absPath],
       isFile: stat.isFile(),
       isDirectory: stat.isDirectory(),
       data: mergeWithObj({}, {

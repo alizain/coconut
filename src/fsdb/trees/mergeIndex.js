@@ -13,6 +13,7 @@ export default function() {
     node.children = node.children.filter((obj) => {
       if (obj.isFile && obj.path.name === "index") {
         node.data = mergeWithProps(node.data, obj.data, false)
+        node.sources.push(obj.pathStr)
         return false
       }
       return true
