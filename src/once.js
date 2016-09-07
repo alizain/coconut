@@ -5,6 +5,7 @@ import { renderTree } from "./render"
 import { Registry } from "./registry"
 
 export async function once(config) {
+  if (!config) { return }
   try {
     let root = await fsdb(config)
     await load(config.layouts)

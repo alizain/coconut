@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import "regenerator-runtime/runtime"
 import Promise from "bluebird"
 import path from "path"
 import once from "../lib/once"
