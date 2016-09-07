@@ -2,7 +2,7 @@
   "name": "catalyst-static",
   "version": "0.1.7",
   "description": "static site generator with proper data model and react templates",
-  "bin": "bin/catalyst.js",
+  "bin": "lib/bin/catalyst.js",
   "main": "lib/index.js",
   "dependencies": {
     "babel-polyfill": "^6.13.0",
@@ -36,9 +36,7 @@
     "eslint-plugin-react": "latest"
   },
   "scripts": {
-    "dev:src": "./node_modules/.bin/babel src --out-dir lib",
-    "dev:bin": "./node_modules/.bin/babel bin --out-dir bin -x '.es6'",
-    "bundle": "./node_modules/.bin/browserify bin/catalyst.es6 -t babelify --outfile bin/catalyst.js"
+    "dev": "./node_modules/.bin/babel src --out-dir lib"
   },
   "repository": {
     "type": "git",

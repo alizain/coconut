@@ -4,7 +4,7 @@
 
 ## Tooling
 
-- Make it easier to get started (more batteries included)
+- Make it easier to get started (more batteries included)?
 
 ## Misc
 
