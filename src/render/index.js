@@ -11,7 +11,7 @@ function finalizeMarkup(str) {
 
 export function render(node, root, registry) {
   let name = node.layout || node.type
-  if (!name) { return false }
+  if (!name || node.draft === true || node.render === false) { return false }
 
   let comp = registry.get(name)
   if (!comp) { throw new Error(`${name} is not a registered component`) }
