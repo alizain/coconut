@@ -1,6 +1,6 @@
 {
   "name": "catalyst-static",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "static site generator with proper data model and react templates",
   "bin": "bin/catalyst.js",
   "main": "lib/index.js",
