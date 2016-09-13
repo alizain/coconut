@@ -17,7 +17,7 @@ export default {
     transform: val => resolve(val)
   },
   inheritFrom: {
-    description: "file containting shared props for all sibling nodes",
+    description: "file containing shared props for all sibling nodes",
     defaultValue: "common"
   }
 }
