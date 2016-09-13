@@ -1,5 +1,5 @@
 {
-  "name": "catalyst-static",
+  "name": "@alizain/catalyst",
   "version": "0.1.8",
   "description": "static site generator with proper data model and react templates",
   "bin": "lib/bin/catalyst.js",
