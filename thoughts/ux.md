@@ -1,4 +1,4 @@
-# The Experience
+# User Experience
 
 Everything should be bundled in, with `externalize` commands to self-configure some components
 
@@ -23,11 +23,9 @@ For an ideal developer/user experience here's what we need:
 
 ### The How
 
-To really achieve this, we need to make 1 assumption: everything must flow through javascript! It doesn't matter if you write postcss, use gifs, or some new fangled thing, everything must go through javascript.
+To really achieve this, we need to make 1 assumption: everything must flow through javascript. It doesn't matter if you write postcss, use gifs, or some new fangled thing, everything must go through JavaScript.
 
 This way, we can use webpack to resolve dependencies for each page at compile time, and intelligently bundle them together.
-
-We're going to need multiple streams
 
 ## Prior Art
 
