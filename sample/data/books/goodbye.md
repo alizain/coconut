@@ -1,4 +1,4 @@
 ---
 title:      Goodbye
-author:     "*/authors/john"
+author:     john
 ---

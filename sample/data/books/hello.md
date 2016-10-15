@@ -1,4 +1,4 @@
 ---
 title:      Hello
-author:     "*/authors/john"
+author:     john
 ---
