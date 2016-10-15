@@ -2,7 +2,7 @@ import fs from "../helpers/fs"
 import path from "path"
 import spec from "./spec"
 
-const noop = () => {}
+const noop = val => val
 
 export default function init(obj) {
   return Object.keys(spec).reduce((final, key) => {
