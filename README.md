@@ -1,4 +1,4 @@
-# Catalyst
+# Coconut
 
 ## Data/Content Files
 
@@ -32,7 +32,7 @@ The entire layouts folder is required on startup. From there, all registered com
 
 **layouts/Book.js**
 ```javascript
-import { Registry } from "@alizain/catalyst"
+import { Registry } from "@alizain/coconut"
 
 function Book({ node }) {
   return (

@@ -1,10 +1,8 @@
-import Promise from "bluebird"
+import fs from "../helpers/fs"
 import path from "path"
 import spec from "./spec"
 
-const fs = Promise.promisifyAll(require("fs"))
-
-const noop = val => val
+const noop = () => {}
 
 export default function init(obj) {
   return Object.keys(spec).reduce((final, key) => {
@@ -17,7 +15,7 @@ export default function init(obj) {
 }
 
 export async function fromFile(root) {
-  let configFile = path.join(root, "catalyst.json")
+  let configFile = path.join(root, "coconut.json")
   let config = await fs.readFileAsync(configFile, { encoding: "utf8" })
   return init(JSON.parse(config))
 }

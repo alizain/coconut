@@ -1,15 +1,14 @@
 {
-  "name": "@alizain/catalyst",
+  "name": "@alizain/coconut",
   "version": "0.1.8",
   "description": "static site generator with proper data model and react templates",
-  "bin": "lib/bin/catalyst.js",
+  "bin": "lib/bin/coconut.js",
   "main": "lib/index.js",
   "dependencies": {
+    "@alizain/fsdb": ">0.1.0",
     "babel-polyfill": "^6.13.0",
     "babel-register": "^6.14.0",
-    "js-yaml": "^3.6.1",
-    "lodash.get": "^4.4.2",
-    "lodash.sortby": "^4.7.0",
+    "fs-extra": "^0.30.0",
     "marked": "^0.3.6",
     "mkdirp": "^0.5.1",
     "react": "^15.3.1",
@@ -40,12 +39,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alizain/catalyst.git"
+    "url": "git+https://github.com/alizain/coconut.git"
   },
   "author": "Alizain Feerasta",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alizain/catalyst/issues"
+    "url": "https://github.com/alizain/coconut/issues"
   },
-  "homepage": "https://github.com/alizain/catalyst#readme"
+  "homepage": "https://github.com/alizain/coconut#readme"
 }

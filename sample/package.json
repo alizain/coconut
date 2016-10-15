@@ -1,7 +1,7 @@
 {
-  "name": "catalyst-sample",
+  "name": "coconut-sample",
   "version": "0.1.0",
-  "description": "catalyst-sample",
+  "description": "coconut-sample",
   "main": "index.js",
   "devDependencies": {
     "babel-preset-es2015": "^6.14.0",

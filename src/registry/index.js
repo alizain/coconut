@@ -9,9 +9,7 @@ function add(name, comp) {
   components[name] = comp
 }
 
-export const Registry = {
-  add,
-  get
+export default {
+  get,
+  add
 }
-
-export default Registry

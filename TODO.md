@@ -5,7 +5,7 @@
 
 ## Tooling
 
-- Make it easier to get started (more batteries included), especially need a better CSS/images story, perhaps with webpack? We can include a `catalyst expose webpack` command to externalize the webpack config outside of catalyst. There also should be a way to make sure that we can use postcss, scss, or less.
+- Make it easier to get started (more batteries included), especially need a better CSS/images story, perhaps with webpack? We can include a `coconut expose webpack` command to externalize the webpack config outside of coconut. There also should be a way to make sure that we can use postcss, scss, or less.
 
 ## Misc
 
