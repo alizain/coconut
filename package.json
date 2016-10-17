@@ -2,7 +2,9 @@
   "name": "@alizain/coconut",
   "version": "0.1.9",
   "description": "static site generator with proper data model and react templates",
-  "bin": "lib/bin/coconut.js",
+  "bin": {
+    "coconut": "lib/bin/coconut.js"
+  },
   "main": "lib/index.js",
   "dependencies": {
     "@alizain/fsdb": "^0.1.11",

@@ -1,5 +1,5 @@
 {
-  "data": "./data",
-  "layouts": "./layouts",
-  "dist": "./dist"
+  "dataDir": "./data",
+  "layoutsDir": "./layouts",
+  "distDir": "./dist"
 }
