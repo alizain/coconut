@@ -7,11 +7,15 @@ function renderPath(node) {
 }
 
 export function renderNode(node, registry) {
-  let name = node.layout || node.type
-
   if (node.draft === true || node.render === false) {
     return false
   }
+
+  if (node._.isDirectory && !node._.isFile) {
+    return false
+  }
+
+  let name = node.layout || node.type
 
   let func = registry.resolve(name)
   if (!func) { throw new Error("Can't find renderer for node") }
