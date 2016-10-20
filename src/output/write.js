@@ -16,7 +16,7 @@ function ensureDirs(files) {
 function writeAll(files) {
   return Promise.all(
     files.map(f =>
-      fs.writeFileAsync(f.path, f.content)
+      fs.writeFileAsync(f.path, f.output)
     )
   )
 }
