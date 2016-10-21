@@ -15,4 +15,4 @@ function run() {
     })
 }
 
-run().then(() => { console.log("Done") }).catch((err) => { throw err })
+run().catch((err) => { throw err })
