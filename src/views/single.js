@@ -23,9 +23,8 @@ export function renderNode(node, registry) {
   }
 
   let name = node.layout || node.type
-
   let func = registry.resolve(name)
-  if (!func) { throw new Error("Can't find renderer for node") }
+  if (!func) { throw new Error(`Can't find renderer for ${name} and no default present`) }
 
   return {
     path: renderPath(node),

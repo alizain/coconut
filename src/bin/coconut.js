@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import Promise from "bluebird"
-import { once } from "../once"
+import { once } from "../"
 import { fromFile } from "../config"
 
 Promise.onPossiblyUnhandledRejection((error) => {
@@ -15,4 +15,4 @@ function run() {
     })
 }
 
-run().catch((err) => { throw err })
+run()

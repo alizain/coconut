@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-if (!regeneratorRuntime) {
+if (!global.regeneratorRuntime) {
   require("babel-polyfill")
 }
 

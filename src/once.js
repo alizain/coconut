@@ -1,5 +1,6 @@
+import "babel-register"
 import fsdb from "@alizain/fsdb"
-import requireDir from "./helpers/requireDir"
+import requireDir from "require-dir"
 import { Registry } from "./registry"
 import render from "./output/render"
 import write from "./output/write"
@@ -15,7 +16,7 @@ export async function once(config) {
   try {
 
     log(`Requiring layout directory from ${config.layoutDir}`)
-    await requireDir(config.layoutDir)
+    await requireDir(config.layoutDir, { recurse: true })
     log("Finished requiring layout directory")
 
     log(`Running fsdb on ${config.dataDir}`)

@@ -1,21 +1,22 @@
 {
   "name": "@alizain/coconut",
-  "version": "0.2.3",
+  "version": "0.2.0",
   "description": "static site generator with proper data model and react templates",
   "bin": {
     "coconut": "lib/bin/coconut.js"
   },
   "main": "lib/index.js",
   "dependencies": {
-    "@alizain/fsdb": "^0.1.11",
+    "@alizain/fsdb": "latest",
     "babel-polyfill": "^6.13.0",
     "babel-register": "^6.14.0",
-    "debug": "^2.2.0",
+    "bluebird": "^3.4.6",
     "graceful-fs": "^4.1.9",
     "marked": "^0.3.6",
     "mkdirp": "^0.5.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
+    "require-dir": "^0.3.1",
     "slug": "^0.9.1"
   },
   "peerDependencies": {
