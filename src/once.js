@@ -22,7 +22,7 @@ export async function once(config) {
     let nodeArr = await fsdb(config.dataDir, config)
     log("Finished running fsdb")
 
-    log(`Rendering ${nodeArr.length} nodes`)
+    log(`Rendering ${views.length} views with ${nodeArr.length} nodes`)
     let files = render(nodeArr, Registry, views)
     log("Finished rendering nodes")
 
