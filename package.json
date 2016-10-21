@@ -1,6 +1,6 @@
 {
   "name": "@alizain/coconut",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "static site generator with proper data model and react templates",
   "bin": {
     "coconut": "lib/bin/coconut.js"
