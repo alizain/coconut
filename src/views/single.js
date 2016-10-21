@@ -1,9 +1,16 @@
 // render all nodes one to one
 
 import { join } from "path"
+import slugify from "../helpers/slugify"
 
 function renderPath(node) {
-  return join(node.path.join("/"), node.slug, "index.html")
+  return join(
+    node.path
+      .concat([node.slug])
+      .map(slugify)
+      .join("/"),
+    "index.html"
+  )
 }
 
 export function renderNode(node, registry) {
